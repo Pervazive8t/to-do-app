@@ -1,0 +1,319 @@
+html { 
+  box-sizing: border-box; 
+  font-size: 10px;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  }
+
+*, *:before, *:after { 
+  box-sizing: inherit; 
+  }
+
+body, ul, li  { 
+  margin-top: 0; 
+  padding: 0; 
+  }
+
+.header {
+  background: #1d1e26;
+  color: #116466;
+  padding: 5px 0;
+  text-align: center;
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+  position: fixed;
+  top: -1px; /* Position it at the top */
+  width: 100%; /* Make it span the full width of the viewport */
+  z-index: 1000; /* Ensure it stays above other content */
+  margin-left: -10px;
+}
+
+#header-btn {
+    background-color: #f1356d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    margin: 5px;
+    font-size: 1.6rem;
+}
+
+#header-btn a {
+    text-decoration: none;
+    color: rgb(18, 10, 10);
+}
+#header-btn:hover {
+    filter: brightness(120%)
+}
+
+ul {
+  font-size: 30px;
+  font-family: "Red Hat Text", sans-serif;
+}
+
+li { 
+  list-style: none; 
+  }
+
+p, h1, h2, h3, h4, h5, h6 { 
+  margin-top: 0; 
+  font-size: 20px;
+  text-align: center;
+  color: #d5ead5;
+  }
+
+a { 
+  text-decoration: none; 
+  }
+
+input { 
+  border-style: none; 
+  background: transparent; 
+  outline: none; 
+  }
+
+button { 
+  padding: 0; 
+  background: none; 
+  border: none; 
+  outline: none; 
+}
+
+body {
+    display: flex;
+    height: 100%;
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    background-image: radial-gradient(circle at 0% 0%, #373b52, #252736 51%, #1d1e26);
+    margin-top: 100px; 
+  }
+
+h1.demo {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: normal;
+    margin-bottom: 1rem;
+    color: #f5f6ff;
+  }
+a.demo {
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: normal;
+    color: rgba(202, 205, 239, 0.8);
+    margin-bottom: 3rem;
+  }
+.demo-flex-spacer {
+    flex-grow: 1;
+  }
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 1600px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
+
+:root {
+  --input-background: rgba(57, 63, 84, 0.8);
+  --input-text-inactive: #7881A1;
+  --input-text-active: #BFD2FF;
+}
+
+@keyframes gradient { 
+    0%{background-position:0 0}
+    100%{background-position:100% 0}
+  }
+
+.webflow-style-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 1.4rem 2rem 1.6rem;
+    background: var(--input-background);
+    &:after {
+      content: "";
+      position: absolute;
+      left: 0px;
+      right: 0px;
+      bottom: 0px;
+      z-index: 999;
+      height: 2px;
+      border-bottom-left-radius: 2px;
+      border-bottom-right-radius: 2px;
+      background-position: 0% 0%;
+      background: linear-gradient(to right, #B294FF, #57E6E6, #FEFFB8, #57E6E6, #B294FF, #57E6E6);
+      background-size: 500% auto;
+      animation: gradient 3s linear infinite;
+    }
+  }
+.webflow-style-input input {
+    flex-grow: 1;
+    font-size: 16px;
+    color: var(--input-text-active);
+    font-size: 1.8rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+    &::-webkit-input-placeholder {
+      color: var(--input-text-inactive);
+    }
+  }
+
+.webflow-style-input button {
+    color:  var(--input-text-inactive);
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    font-size: 2.4rem;
+    line-height: 2.4rem;
+    vertical-align: middle;
+    margin-left: 10px;
+    transition: color .25s;
+    &:hover {
+      color: var(--input-text-active);
+    }
+  }
+
+.webflow-style-input button:hover {
+    color: var(--input-text-active);
+}
+
+.to-do-container {
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    
+  }
+
+#to-do-list {
+  flex: 1;
+  list-style-type: none;
+  padding: 0;
+  margin: 0 10px;
+  border: 1px solid #5f1010;
+  border-radius: 5px;
+  background-color: #090a4a;
+  min-height: 200px;
+  width: 100%;
+}
+
+#to-do-list li {
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+  font-size: 16px;
+  cursor: move;
+}
+
+.delete-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ff0000;
+  font-size: 16px;
+  margin-left: auto;
+}
+
+.delete-btn:hover {
+  color: #cc0000;
+}
+
+.check-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  color: #00cc00;
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.check-btn:hover {
+  color: #009900;
+}
+
+.new-task-container {
+  display: flex;
+  margin: 20px;
+}
+
+.in-progress-container {
+  display: flex;
+  margin: 20px;
+}
+
+.done-list-container {
+  display: flex;
+  margin: 20px;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.to-do-list-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px;
+}
+
+.to-do-list {
+    flex: 1;
+    list-style-type: none;
+    padding: 0;
+    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    min-height: 200px; /* Ensure the columns have some height */
+}
+
+.to-do-list li {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 16px;
+    cursor: move; /* Indicate that the item is draggable */
+    color: #f5f6ff;
+}
+
+#new-task {
+    border: 2px solid #ccc;
+    width: 300px;
+    background-color: #1d1e26;
+    height: 400px;
+    
+}
+
+#in-progress {
+  border: 2px solid #ffc107; /* Yellow border for In Progress */
+  width: 300px;
+  background-color: #1d1e26;
+  height: 400px;
+}
+
+#done-list {
+  border: 2px solid #28a745; /* Green border for Done */
+  width: 300px;
+  background-color: #1d1e26;
+  height: 400px;
+  
+}

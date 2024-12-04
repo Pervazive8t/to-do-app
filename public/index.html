@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do List App</title>
+    <link href="../src/styles/global.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap" rel="stylesheet">
+    <style>
+     
+    </style>
+    <nav>
+        <ul class="header">
+            <li id="header-btn"><a href="index.html">Home</a></li>
+            <li id="header-btn"><a href="about.html">About</a></li>
+            <li id="header-btn"><a href="contact.html">Contact</a></li>
+            <li id="header-btn"><a href="log-in.html">Log in</a></li>
+        </ul>
+    </nav>
+</head>
+<body>
+    <div class="container">
+        <h1>To-Do List</h1>
+        <div class="button-container">
+            <img src="../public/images/arrow.png" alt="arrow" class="image" id="arrow-img">
+            <button id="start-btn" onClick="navigateToNewPage()">Start</button>
+        </div>
+        <div class="text-container">
+            <h2>Press to Start!</h2>
+        </div>
+    </div>
+    
+    <script>
+        function navigateToNewPage() {
+            window.location.href = "list-page.html";
+        }
+    </script>
+</body>
+</html>
